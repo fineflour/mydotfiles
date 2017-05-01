@@ -1,0 +1,72 @@
+[color]
+  ui = auto
+[user]
+  name = fineflour
+  email = soojin.cho@bfa.org
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+[branch]
+  autosetupmerge = true
+
+[grep]
+  extendRegexp = true
+  lineNumber = true
+
+[merge]
+#  stat = true
+  ff = only
+[fetch]
+  prune = true
+[push]
+  default = upstream
+[commit]
+  template = ~/.gitmessage
+
+[color "branch"]
+  current = yellow bold
+  local = green bold
+  remote = cyan bold
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
+[color "status"]
+  added = green bold
+  changed = yellow bold
+  untracked = red bold
+[credential]
+  helper = cache
+
+[diff]
+  tool = vimdiff
+[difftool]
+  prompt = false
+[github]
+  user = pkumar
+  token = token
+[gitflow "prefix"]
+  feature = feature-
+  release = release-
+  hotfix = hotfix-
+  support = support-
+  versiontag = v
+[alias]
+  sla = log --oneline --decorate --graph --all
+  aa = add --all
+  b = branch
+  co = checkout
+  uncommit = reset --soft HEAD^
+  ps = push
+  ca = commit -a
+  cm = commit -m
+  df = diff --word-diff --color-words
+  slap = log --oneline --decorate --all --graph
+  slp = log --oneline --decorate --graph
+  master = checkout master
+  browse = !hub browse
+  compare =!hub compare
+  issues = !hub browse --issues
